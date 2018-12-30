@@ -1,0 +1,36 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3">
+                <i class="fas fa-sign-in-alt"></i>
+                Register
+            </h1>
+            <form action="/users/register" method='POST'>
+                <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                    type='email'
+                    id='email'
+                    name='email'
+                    class='form-control'
+                    placeholder='Enter an Email'
+                    value="<% typeof name != 'undefined' ? email: '' %>"
+                >
+                </div>
+                <div class="form-group">
+                    <label for="email">Password</label>
+                    <input 
+                        type='password'
+                        id='password2'
+                        name='password2'
+                        class='form-control'
+                        placeholder='Enter a Password'
+                        value="<% typeof name != 'undefined' ? password: '' %>"
+                    >
+                </div>
+                <button class="btn btn-primary btn-block">Login</button>
+            </form>
+            <p class="lead mt-4">Don't Have An Account? - <a href="/users/register">Register</a></p>
+        </div>
+    </div>
+</div>
